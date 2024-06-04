@@ -1,16 +1,13 @@
+# File: azure-pipelines.yml
+
 jobs:
 - job: Linux
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-  - script: echo hello from Linux
-- job: macOS
-  pool:
-    vmImage: 'macOS-latest'
-  steps:
-  - script: echo hello from macOS
+  - template: templates/include-npm-steps.yml  # Template reference
 - job: Windows
   pool:
     vmImage: 'windows-latest'
   steps:
-  - script: echo hello from Windows
+  - template: templates/include-npm-steps.yml  # Template reference
