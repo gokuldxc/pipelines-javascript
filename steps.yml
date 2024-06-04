@@ -2,5 +2,5 @@
 
 steps:
 - script: npm install
-- script: yarn install
-- script: npm run compile
+#- script: yarn install
+#- script: npm run compile
